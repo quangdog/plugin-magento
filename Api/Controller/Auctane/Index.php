@@ -10,12 +10,17 @@ use Magento\Backend\Model\Auth\Credential\StorageInterface;
 use Magento\Backend\Model\View\Result\RedirectFactory;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\CsrfAwareActionInterface;
 use Magento\Framework\App\Request\InvalidRequestException;
 use Magento\Framework\App\RequestInterface;
-use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\StoreManagerInterface;
 
+/**
+ * Thanks to the contributions of GitHub user Hailong for adding in CSRF Validation
+ * https://gist.github.com/Hailong/a0d13065529e03b3493e9cb46a5e115d
+ * @package Auctane\Api\Controller\Auctane
+ */
 class Index extends Action implements CsrfAwareActionInterface
 {
     /**
